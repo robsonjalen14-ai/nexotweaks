@@ -70,10 +70,10 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const y = window.scrollY;
     if (y > 50) {
-        nav.style.borderBottomColor = 'rgba(90,173,173,.12)';
+        nav.classList.add('scrolled');
         nav.style.background = 'rgba(8,12,18,.92)';
     } else {
-        nav.style.borderBottomColor = '';
+        nav.classList.remove('scrolled');
         nav.style.background = '';
     }
     lastScroll = y;

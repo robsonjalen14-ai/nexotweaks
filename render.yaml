@@ -1,6 +1,12 @@
 services:
   - type: web
-    name: nxstore
-    runtime: static
-    buildCommand: ""
-    staticPublishPath: .
+    name: nxo-tweaks
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production

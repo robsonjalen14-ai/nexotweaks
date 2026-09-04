@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Nxo Tweaks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="glow glow-1"></div>
+
+    <div class="success-page">
+        <div class="success-card">
+            <div class="success-icon">&#10003;</div>
+            <h1>Payment Successful!</h1>
+            <p>Thank you for your purchase. Your Nxo Tweaks license has been sent to your email.</p>
+            <div class="success-details">
+                <p><strong>Check your inbox</strong> for download instructions and your license key.</p>
+                <p>If you don't see it, check your spam folder.</p>
+            </div>
+            <div class="success-buttons">
+                <a href="/" class="btn-primary">Back to Home</a>
+                <a href="https://discord.gg/nxotweaks" class="btn-secondary" target="_blank">Join Discord</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .success-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;z-index:1}
+        .success-card{background:rgba(12,18,30,0.8);border:1px solid rgba(0,210,211,0.2);border-radius:24px;padding:4rem;text-align:center;max-width:500px;width:100%;backdrop-filter:blur(20px)}
+        .success-icon{width:80px;height:80px;background:linear-gradient(135deg,#00d2d3,#01a3a4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 2rem;color:#fff;animation:pulse-success 2s ease-in-out infinite}
+        @keyframes pulse-success{0%,100%{box-shadow:0 0 0 0 rgba(0,210,211,0.4)}50%{box-shadow:0 0 0 20px rgba(0,210,211,0)}}
+        .success-card h1{font-size:2rem;font-weight:800;margin-bottom:1rem;letter-spacing:-1px}
+        .success-card>p{color:#6b7a94;margin-bottom:2rem}
+        .success-details{background:rgba(0,210,211,0.05);border:1px solid rgba(0,210,211,0.15);border-radius:12px;padding:1.5rem;margin-bottom:2rem;text-align:left}
+        .success-details p{color:#6b7a94;font-size:.9rem;margin-bottom:.5rem}
+        .success-details p:last-child{margin-bottom:0}
+        .success-details strong{color:#fff}
+        .success-buttons{display:flex;gap:1rem;justify-content:center}
+    </style>
+</body>
+</html>

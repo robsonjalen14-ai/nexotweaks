@@ -1,0 +1,16 @@
+{
+  "name": "nxo-tweaks",
+  "version": "1.0.0",
+  "description": "Nxo Tweaks - Premium PC Optimization",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "stripe": "^14.14.0"
+  }
+}

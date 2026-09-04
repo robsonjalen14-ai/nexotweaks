@@ -1,82 +1,34 @@
 // Particles
-const particlesContainer = document.getElementById('particles');
-for (let i = 0; i < 30; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-    particle.style.animationDelay = Math.random() * 10 + 's';
-    particle.style.width = (Math.random() * 4 + 2) + 'px';
-    particle.style.height = particle.style.width;
-    particlesContainer.appendChild(particle);
-}
+const pc=document.getElementById('particles');
+const colors=['#00d2d3','#6c5ce7','#48dbfb','#f9ca24'];
+for(let i=0;i<40;i++){const p=document.createElement('div');p.className='particle';const c=colors[Math.floor(Math.random()*colors.length)];const s=Math.random()*4+2;p.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;background:${c};box-shadow:0 0 ${s*2}px ${c};animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*10}s`;pc.appendChild(p)}
 
-// FAQ Accordion
-document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const wasActive = item.classList.contains('active');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-        if (!wasActive) item.classList.add('active');
-    });
+// FAQ
+document.querySelectorAll('.faq-question').forEach(b=>b.addEventListener('click',()=>{const i=b.parentElement;const w=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('active'));if(!w)i.classList.add('active')}));
+
+// Stats Counter
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){document.querySelectorAll('.stat-number').forEach(s=>{const t=+s.dataset.target;const d=2000;const st=t/(d/16);let c=0;const u=()=>{c+=st;if(c<t){s.textContent=Math.floor(c).toLocaleString();requestAnimationFrame(u)}else{s.textContent=t.toLocaleString()}};u()});io.disconnect()}})},{threshold:.5});
+const ss=document.querySelector('.stats');if(ss)io.observe(ss);
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}));
+
+// Navbar
+let lastScroll=0;
+window.addEventListener('scroll',()=>{const n=document.querySelector('.navbar');const s=window.scrollY;n.style.background=s>50?'rgba(6,11,20,0.92)':'rgba(6,11,20,0.7)';lastScroll=s});
+
+// FPS Counter in hero (subtle)
+const hero=document.querySelector('.hero-visual');
+if(hero){setInterval(()=>{const glow=document.querySelector('.hero-logo-glow');if(glow){glow.style.opacity=Math.random()*.4+.6}},2000)}
+
+// Intersection Observer for fade-in
+const fadeObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1});
+
+document.querySelectorAll('.product-card,.feature-card,.review-card,.faq-item').forEach(el=>{
+    el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .6s ease,transform .6s ease';
+    fadeObserver.observe(el)
 });
 
-// Stats Counter Animation
-const observerOptions = { threshold: 0.5 };
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            document.querySelectorAll('.stat-number').forEach(stat => {
-                const target = parseInt(stat.dataset.target);
-                const duration = 2000;
-                const step = target / (duration / 16);
-                let current = 0;
-                const update = () => {
-                    current += step;
-                    if (current < target) {
-                        stat.textContent = Math.floor(current).toLocaleString();
-                        requestAnimationFrame(update);
-                    } else {
-                        stat.textContent = target.toLocaleString();
-                    }
-                };
-                update();
-            });
-            statsObserver.disconnect();
-        }
-    });
-}, observerOptions);
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) statsObserver.observe(statsSection);
-
-// Smooth scroll for nav links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
-
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(10, 10, 26, 0.95)';
-    } else {
-        navbar.style.background = 'rgba(10, 10, 26, 0.8)';
-    }
-});
-
-// FPS Counter animation
-const fpsValue = document.querySelector('.fps-value');
-if (fpsValue) {
-    let fps = 60;
-    setInterval(() => {
-        fps = Math.floor(Math.random() * 30) + 220;
-        fpsValue.textContent = fps;
-    }, 2000);
-}
+// Stagger animation delays
+document.querySelectorAll('.product-card').forEach((el,i)=>el.style.transitionDelay=`${i*0.1}s`);
+document.querySelectorAll('.feature-card').forEach((el,i)=>el.style.transitionDelay=`${i*0.08}s`);

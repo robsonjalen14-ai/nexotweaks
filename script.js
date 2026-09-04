@@ -1,6 +1,4 @@
 // Stripe Checkout
-const STRIPE_PUBLISHABLE_KEY = 'pk_test_51234567890abcdef'; // Replace with your Stripe publishable key
-
 async function checkout(product) {
     const btn = document.querySelector(`[data-product="${product}"]`);
     btn.classList.add('loading');

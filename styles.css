@@ -7,6 +7,7 @@
 }
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat}
 
 /* ── Nav ── */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 0;background:rgba(11,17,24,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
@@ -135,13 +136,23 @@ tr:last-child td{border-bottom:none}
 
 /* ── Reviews ── */
 .reviews-section{padding:5rem 0;overflow:hidden}
-.reviews-row{display:flex;gap:1.25rem;padding:0 2rem;animation:reviews-scroll 40s linear infinite;width:max-content}
+.reviews-row{display:flex;gap:1rem;padding:0 2rem;animation:reviews-scroll 50s linear infinite;width:max-content}
 .reviews-row:hover{animation-play-state:paused}
-@keyframes reviews-scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-370px * 5 - 1.25rem * 5))}}
-.review-card{flex:0 0 350px;background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:border-color .3s}
+.reviews-row::-webkit-scrollbar{display:none}
+@keyframes reviews-scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-310px * 8 - 1rem * 8))}}
+.review-card{flex:0 0 310px;background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color .3s}
 .review-card:hover{border-color:var(--border-hover)}
+.review-card.vouch{background:#2b2d31;border:none;border-radius:8px;padding:10px 12px;flex:0 0 300px}
+.vouch-header{display:flex;align-items:center;gap:.5rem;margin-bottom:6px}
+.vouch-avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;text-transform:capitalize;font-weight:500}
+.vouch-info{display:flex;align-items:center;gap:.4rem;font-size:.9rem}
+.vouch-info strong{color:#fff;font-size:.95rem}
+.vouch-badge{background:#5865f2;color:#fff;font-size:.6rem;padding:1px 5px;border-radius:3px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.vouch-date{color:#72767d;font-size:.7rem}
+.vouch-check{margin-left:auto;color:#23a559;font-size:.8rem;font-weight:500}
+.review-card.vouch p{font-size:.87rem;color:#b5bac1;line-height:1.4;margin:0;font-style:normal}
 .review-stars{color:#fbbf24;font-size:.9rem;margin-bottom:1rem;letter-spacing:2px}
-.review-card p{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:1.25rem;font-style:italic}
+.review-card:not(.vouch) p{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:1.25rem;font-style:italic}
 .review-footer{display:flex;align-items:center;gap:.75rem}
 .review-avatar{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#fff}
 .review-footer strong{display:block;font-size:.85rem}

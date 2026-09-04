@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220">
   <defs>
     <linearGradient id="shieldMain" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stop-color="#62b8b4"/>
+      <stop offset="0%" stop-color="#6fbfb8"/>
       <stop offset="100%" stop-color="#4a9e9a"/>
     </linearGradient>
     <linearGradient id="shieldFace" x1="50%" y1="0%" x2="50%" y2="100%">
@@ -18,13 +18,13 @@
     </filter>
   </defs>
   
-  <!-- Outer shield (edge/border) -->
+  <!-- Outer shield edge -->
   <path d="M100 8 L188 40 L188 110 L100 212 L12 110 L12 40 Z" fill="url(#shieldEdge)" filter="url(#shadow)"/>
   
   <!-- Main shield face -->
   <path d="M100 16 L180 44 L180 108 L100 204 L20 108 L20 44 Z" fill="url(#shieldMain)"/>
   
-  <!-- Inner face (lighter, gives 3D effect) -->
+  <!-- Inner face lighter for 3D depth -->
   <path d="M100 28 L168 50 L168 104 L100 190 L32 104 L32 50 Z" fill="url(#shieldFace)" opacity="0.55"/>
   
   <!-- Top highlight -->

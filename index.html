@@ -3,165 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nxo Tweaks - FPS Boost, Zero Delay & PC Optimization</title>
+    <title>Nxo Tweaks - Premium PC Optimization</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="glow-bg"></div>
+    <div class="glow-bg-2"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Nxo<span>Tweaks</span></a>
             <ul class="nav-links">
                 <li><a href="#products">Products</a></li>
-                <li><a href="#features">Features</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#features">Why Us</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
-            <a href="https://nxotweaks.sellhub.cx" class="cart-btn" target="_blank">Visit Store</a>
+            <a href="https://discord.gg/nxotweaks" class="nav-discord" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                Discord
+            </a>
         </div>
     </nav>
 
     <header class="hero">
+        <div class="hero-particles" id="particles"></div>
         <div class="hero-content">
-            <h1>Boost Your FPS. Zero Delay. Dominate.</h1>
-            <p>Premium Windows optimization trusted by thousands. Instant delivery via SellHub.</p>
-            <a href="#products" class="cta-btn">Shop Now</a>
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                Trusted by 10,000+ Gamers
+            </div>
+            <h1>Dominate Every<br><span class="gradient-text">Match.</span></h1>
+            <p class="hero-desc">Premium Windows optimization. Boost FPS, eliminate input delay, and unlock your PC's full potential with Nxo Tweaks.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">
+                    <span>Shop Tweaks</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://discord.gg/nxotweaks" class="btn-secondary" target="_blank">Join Discord</a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span class="trust-num">200+</span>
+                    <span class="trust-label">Tweaks</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-num">10K+</span>
+                    <span class="trust-label">Users</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-num">500+</span>
+                    <span class="trust-label">Reviews</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="fps-counter">
+                <div class="fps-ring"></div>
+                <div class="fps-value">240</div>
+                <div class="fps-label">FPS</div>
+            </div>
         </div>
     </header>
 
+    <section class="stats" id="stats">
+        <div class="stats-container">
+            <div class="stat">
+                <span class="stat-number" data-target="10000">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Active Users</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="200">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Optimizations</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="99">0</span><span class="stat-percent">%</span>
+                <span class="stat-label">Satisfaction</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="24">0</span><span class="stat-plus">/7</span>
+                <span class="stat-label">Support</span>
+            </div>
+        </div>
+    </section>
+
     <section id="products" class="products">
-        <h2>Choose Your Pack</h2>
-        <p class="section-sub">Instant delivery · Lifetime access · 24/7 Discord support</p>
+        <div class="section-header">
+            <span class="section-tag">Products</span>
+            <h2>Choose Your <span class="gradient-text">Power Level</span></h2>
+            <p>All packs include instant delivery, lifetime access, and free updates.</p>
+        </div>
         <div class="product-grid">
-
-            <div class="product-card" data-id="1" data-name="Nxo Tweaks Basic" data-price="4.99">
-                <div class="product-icon">&#9889;</div>
+            <div class="product-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="product-tier">Basic</div>
+                <div class="product-icon-wrap">
+                    <div class="product-icon">&#9889;</div>
+                </div>
                 <h3>Nxo Tweaks Basic</h3>
-                <p>Essential Windows optimizations to boost FPS and reduce input lag. Perfect starting point.</p>
+                <p>Essential optimizations to get started. Boost FPS and reduce input lag instantly.</p>
                 <ul class="product-features">
-                    <li>&#10003; Basic FPS tweaks</li>
-                    <li>&#10003; Input lag reduction</li>
-                    <li>&#10003; Safe & reversible</li>
-                    <li>&#10003; Instant delivery</li>
+                    <li><span class="check">&#10003;</span> FPS Boost Tweaks</li>
+                    <li><span class="check">&#10003;</span> Input Lag Reduction</li>
+                    <li><span class="check">&#10003;</span> Windows Optimization</li>
+                    <li><span class="check">&#10003;</span> Safe & Reversible</li>
                 </ul>
-                <div class="product-footer">
-                    <span class="price">£4.99</span>
-                    <a href="https://nxotweaks.sellhub.cx" class="buy-btn" target="_blank">Purchase</a>
+                <div class="product-price">
+                    <span class="currency">£</span><span class="amount">4.99</span>
                 </div>
+                <a href="https://nxotweaks.sellhub.cx" class="btn-buy" target="_blank">
+                    <span>Purchase</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
 
-            <div class="product-card" data-id="2" data-name="Nxo Tweaks Pro" data-price="9.99">
-                <div class="product-badge">POPULAR</div>
-                <div class="product-icon">&#128640;</div>
+            <div class="product-card popular" data-tilt>
+                <div class="card-glow"></div>
+                <div class="popular-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Most Popular
+                </div>
+                <div class="product-tier">Pro</div>
+                <div class="product-icon-wrap">
+                    <div class="product-icon">&#128640;</div>
+                </div>
                 <h3>Nxo Tweaks Pro</h3>
-                <p>Advanced optimizations for serious gamers. Higher FPS, lower latency, smoother gameplay.</p>
+                <p>Advanced optimizations for competitive gamers. Higher FPS, lower latency.</p>
                 <ul class="product-features">
-                    <li>&#10003; All Basic tweaks</li>
-                    <li>&#10003; GPU scheduling tuning</li>
-                    <li>&#10003; Network optimization</li>
-                    <li>&#10003; Game mode profiles</li>
+                    <li><span class="check">&#10003;</span> Everything in Basic</li>
+                    <li><span class="check">&#10003;</span> GPU Scheduling Tuning</li>
+                    <li><span class="check">&#10003;</span> Network Optimization</li>
+                    <li><span class="check">&#10003;</span> Game Mode Profiles</li>
+                    <li><span class="check">&#10003;</span> Priority Support</li>
                 </ul>
-                <div class="product-footer">
-                    <span class="price">£9.99</span>
-                    <a href="https://nxotweaks.sellhub.cx" class="buy-btn" target="_blank">Purchase</a>
+                <div class="product-price">
+                    <span class="currency">£</span><span class="amount">9.99</span>
                 </div>
+                <a href="https://nxotweaks.sellhub.cx" class="btn-buy" target="_blank">
+                    <span>Purchase</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
 
-            <div class="product-card" data-id="3" data-name="Nxo Tweaks Extreme" data-price="14.99">
-                <div class="product-icon">&#128293;</div>
+            <div class="product-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="product-tier">Extreme</div>
+                <div class="product-icon-wrap">
+                    <div class="product-icon">&#128293;</div>
+                </div>
                 <h3>Nxo Tweaks Extreme</h3>
-                <p>Maximum performance. Every system tweak unlocked for competitive-level gameplay.</p>
+                <p>Maximum performance unlocked. Every system tweak for pro-level gameplay.</p>
                 <ul class="product-features">
-                    <li>&#10003; All Pro tweaks</li>
-                    <li>&#10003; Timer resolution fix</li>
-                    <li>&#10003; DPC latency reduction</li>
-                    <li>&#10003; Priority support</li>
+                    <li><span class="check">&#10003;</span> Everything in Pro</li>
+                    <li><span class="check">&#10003;</span> Timer Resolution Fix</li>
+                    <li><span class="check">&#10003;</span> DPC Latency Reduction</li>
+                    <li><span class="check">&#10003;</span> CPU Core Optimization</li>
+                    <li><span class="check">&#10003;</span> VIP Support</li>
                 </ul>
-                <div class="product-footer">
-                    <span class="price">£14.99</span>
-                    <a href="https://nxotweaks.sellhub.cx" class="buy-btn" target="_blank">Purchase</a>
+                <div class="product-price">
+                    <span class="currency">£</span><span class="amount">14.99</span>
                 </div>
+                <a href="https://nxotweaks.sellhub.cx" class="btn-buy" target="_blank">
+                    <span>Purchase</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
 
-            <div class="product-card popular" data-id="4" data-name="Nxo Tweaks Ultimate" data-price="19.99">
-                <div class="product-badge best">BEST VALUE</div>
-                <div class="product-icon">&#11088;</div>
+            <div class="product-card ultimate" data-tilt>
+                <div class="card-glow"></div>
+                <div class="ultimate-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Best Value
+                </div>
+                <div class="product-tier">Ultimate</div>
+                <div class="product-icon-wrap">
+                    <div class="product-icon">&#11088;</div>
+                </div>
                 <h3>Nxo Tweaks Ultimate</h3>
-                <p>The complete package. Everything Nxo Tweaks offers in one ultimate pack.</p>
+                <p>The complete arsenal. Everything Nxo offers in one ultimate package.</p>
                 <ul class="product-features">
-                    <li>&#10003; All Extreme tweaks</li>
-                    <li>&#10003; Debloat tool</li>
-                    <li>&#10003; Custom game profiles</li>
-                    <li>&#10003; Lifetime updates</li>
-                    <li>&#10003; VIP Discord role</li>
+                    <li><span class="check">&#10003;</span> Everything in Extreme</li>
+                    <li><span class="check">&#10003;</span> Debloat Tool</li>
+                    <li><span class="check">&#10003;</span> Custom Game Profiles</li>
+                    <li><span class="check">&#10003;</span> Lifetime Updates</li>
+                    <li><span class="check">&#10003;</span> VIP Discord Role</li>
+                    <li><span class="check">&#10003;</span> Early Access Features</li>
                 </ul>
-                <div class="product-footer">
-                    <span class="price">£19.99</span>
-                    <a href="https://nxotweaks.sellhub.cx" class="buy-btn" target="_blank">Purchase</a>
+                <div class="product-price">
+                    <span class="currency">£</span><span class="amount">19.99</span>
                 </div>
+                <a href="https://nxotweaks.sellhub.cx" class="btn-buy ultimate-btn" target="_blank">
+                    <span>Purchase</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
-
         </div>
     </section>
 
     <section id="features" class="features">
-        <h2>Why Nxo Tweaks?</h2>
+        <div class="section-header">
+            <span class="section-tag">Why Us</span>
+            <h2>Built for <span class="gradient-text">Champions</span></h2>
+        </div>
         <div class="features-grid">
-            <div class="feature">
-                <div class="feature-icon">&#9889;</div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
                 <h3>Instant Delivery</h3>
-                <p>Get your tweaks immediately after purchase via SellHub. No waiting.</p>
+                <p>Get your tweaks immediately after purchase. No waiting, no delays.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">&#128737;</div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
                 <h3>100% Safe</h3>
                 <p>Every tweak is reversible. System restore point created automatically.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">&#128176;</div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8l-4 4-4-4"/></svg>
+                </div>
                 <h3>One-Time Payment</h3>
                 <p>Pay once, own forever. No subscriptions. Free lifetime updates.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">&#128172;</div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
                 <h3>24/7 Discord Support</h3>
                 <p>Get help anytime from our team on Discord.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3>Weekly Updates</h3>
+                <p>New tweaks and optimizations shipped every week.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Anti-Cheat Safe</h3>
+                <p>Doesn't touch game files. Safe for all games and anti-cheat systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="section-header">
+            <span class="section-tag">Reviews</span>
+            <h2>What Gamers <span class="gradient-text">Say</span></h2>
+        </div>
+        <div class="reviews-track">
+            <div class="review-card">
+                <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                <p>"Zero Delay+ completely changed my gameplay. My edits feel instant now."</p>
+                <div class="review-author">
+                    <div class="author-avatar">P</div>
+                    <div>
+                        <span class="author-name">Pro Player</span>
+                        <span class="author-title">Competitive Fortnite</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                <p>"Got 200+ FPS boost with the Ultimate pack. Best investment for competitive gaming."</p>
+                <div class="review-author">
+                    <div class="author-avatar">C</div>
+                    <div>
+                        <span class="author-name">Content Creator</span>
+                        <span class="author-title">50K Subscribers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                <p>"Ping went from 60ms to 20ms. The network tweaks actually work. insane."</p>
+                <div class="review-author">
+                    <div class="author-avatar">S</div>
+                    <div>
+                        <span class="author-name">Streamer</span>
+                        <span class="author-title">Twitch Partner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                <p>"Input delay went from 45ms to under 5ms. I can actually hit my shots now."</p>
+                <div class="review-author">
+                    <div class="author-avatar">A</div>
+                    <div>
+                        <span class="author-name">Ayman</span>
+                        <span class="author-title">Valorant Player</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+                <p>"The debloat tool freed up 4GB of RAM. My PC runs so much smoother now."</p>
+                <div class="review-author">
+                    <div class="author-avatar">J</div>
+                    <div>
+                        <span class="author-name">Jake</span>
+                        <span class="author-title">Low-end PC User</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="faq" class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
+        <div class="section-header">
+            <span class="section-tag">FAQ</span>
+            <h2>Got <span class="gradient-text">Questions?</span></h2>
+        </div>
+        <div class="faq-container">
             <div class="faq-item">
-                <h3>Is it safe?</h3>
-                <p>Yes. Every tweak has a one-click revert, and a full system restore point is created before any changes.</p>
+                <button class="faq-question">
+                    Is it safe?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. Every tweak has a one-click revert, and a full system restore point is created before any changes. Risky tweaks are flagged and never run unless you opt in.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3>Will I get banned?</h3>
-                <p>No. Nxo Tweaks only modifies Windows system settings - it does not touch game files or anti-cheat systems.</p>
+                <button class="faq-question">
+                    Will I get banned?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No. Nxo Tweaks only modifies Windows system settings - it does not touch game files or anti-cheat systems. 100% safe for all games.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3>How do I get the product?</h3>
-                <p>After purchase on SellHub, you'll receive your download link and instructions via email instantly.</p>
+                <button class="faq-question">
+                    How do I get the product?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>After purchase on SellHub, you'll receive your download link and instructions via email instantly. Setup takes less than 2 minutes.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h3>Do you offer refunds?</h3>
-                <p>Yes. If the product doesn't work as advertised, contact us on Discord for a full refund.</p>
+                <button class="faq-question">
+                    Do you offer refunds?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. If the product doesn't work as advertised, contact us on Discord for a full refund.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Which pack should I get?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Basic is great for beginners. Pro for competitive gamers. Extreme for pros. Ultimate for those who want everything.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Need Help?</h2>
-        <p>Join our Discord community for instant support</p>
-        <a href="https://discord.gg/nxotweaks" class="discord-btn" target="_blank">Join Discord</a>
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to <span class="gradient-text">Dominate?</span></h2>
+            <p>Join 10,000+ gamers who already optimized their PCs with Nxo Tweaks.</p>
+            <a href="#products" class="btn-primary">
+                <span>Get Started</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Nxo Tweaks. All rights reserved.</p>
-        <p class="footer-links">
-            <a href="https://nxotweaks.sellhub.cx" target="_blank">SellHub Store</a> · 
-            <a href="https://discord.gg/nxotweaks" target="_blank">Discord</a>
-        </p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">Nxo<span>Tweaks</span></a>
+                <p>Premium Windows optimization for gamers. Boost FPS, reduce input delay, and dominate every match.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="https://nxotweaks.sellhub.cx" target="_blank">Basic</a>
+                    <a href="https://nxotweaks.sellhub.cx" target="_blank">Pro</a>
+                    <a href="https://nxotweaks.sellhub.cx" target="_blank">Extreme</a>
+                    <a href="https://nxotweaks.sellhub.cx" target="_blank">Ultimate</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Community</h4>
+                    <a href="https://discord.gg/nxotweaks" target="_blank">Discord</a>
+                    <a href="https://nxotweaks.sellhub.cx" target="_blank">Store</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Refunds</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nxo Tweaks. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

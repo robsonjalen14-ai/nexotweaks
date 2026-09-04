@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NX Store - Premium Digital Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">NX<span>Store</span></a>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cart-btn" id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Premium Digital Products</h1>
+            <p>Fast delivery. Secure payment. Top quality.</p>
+            <a href="#products" class="cta-btn">Browse Products</a>
+        </div>
+    </header>
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid" id="productGrid">
+            <div class="product-card" data-id="1" data-name="Nxo Tweaks Pro" data-price="14.99">
+                <div class="product-badge">BEST SELLER</div>
+                <div class="product-icon">&#9889;</div>
+                <h3>Nxo Tweaks Pro</h3>
+                <p>Full performance optimization pack for maximum FPS and lowest input lag.</p>
+                <div class="product-features">
+                    <span>&#10003; Instant Delivery</span>
+                    <span>&#10003; Lifetime Access</span>
+                </div>
+                <div class="product-footer">
+                    <span class="price">$14.99</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="2" data-name="Nxo RGB Pack" data-price="9.99">
+                <div class="product-badge new">NEW</div>
+                <div class="product-icon">&#127912;</div>
+                <h3>Nxo RGB Pack</h3>
+                <p>Custom RGB lighting profiles and animations for your setup.</p>
+                <div class="product-features">
+                    <span>&#10003; Instant Delivery</span>
+                    <span>&#10003; 50+ Profiles</span>
+                </div>
+                <div class="product-footer">
+                    <span class="price">$9.99</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="3" data-name="Nxo Macro Suite" data-price="19.99">
+                <div class="product-icon">&#9881;</div>
+                <h3>Nxo Macro Suite</h3>
+                <p>Advanced macro automation tool with custom scripting support.</p>
+                <div class="product-features">
+                    <span>&#10003; Instant Delivery</span>
+                    <span>&#10003; Auto Updates</span>
+                </div>
+                <div class="product-footer">
+                    <span class="price">$19.99</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="4" data-name="Nxo VPN Shield" data-price="24.99">
+                <div class="product-icon">&#128737;</div>
+                <h3>Nxo VPN Shield</h3>
+                <p>Secure VPN service with dedicated servers and zero logs policy.</p>
+                <div class="product-features">
+                    <span>&#10003; 6 Months Access</span>
+                    <span>&#10003; All Devices</span>
+                </div>
+                <div class="product-footer">
+                    <span class="price">$24.99</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="5" data-name="Nxo Sound Pack" data-price="7.99">
+                <div class="product-icon">&#127925;</div>
+                <h3>Nxo Sound Pack</h3>
+                <p>Premium sound effects and notification tones for your system.</p>
+                <div class="product-features">
+                    <span>&#10003; Instant Delivery</span>
+                    <span>&#10003; 200+ Sounds</span>
+                </div>
+                <div class="product-footer">
+                    <span class="price">$7.99</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="6" data-name="Nxo Wallpaper HD" data-price="4.99">
+                <div class="product-icon">&#127748;</div>
+                <h3>Nxo Wallpaper HD</h3>
+                <p>Exclusive 4K wallpapers and live backgrounds collection.</p>
+                <div class="product-features">
+                    <span>&#10003; Instant Delivery</span>
+                    <span>&#10003; 100+ Wallpapers</span>
+                </div>
+                <div class="product-footer">
+                    <span class="price">$4.99</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Why Choose NX Store?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">&#9889;</div>
+                    <h3>Instant Delivery</h3>
+                    <p>Get your products immediately after payment via email.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128274;</div>
+                    <h3>Secure Payment</h3>
+                    <p>Pay safely with Stripe - your data is always protected.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128172;</div>
+                    <h3>24/7 Support</h3>
+                    <p>Our team is here to help you anytime via Discord.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#10024;</div>
+                    <h3>Premium Quality</h3>
+                    <p>All products tested and updated regularly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Join our Discord for support and updates</p>
+        <a href="#" class="discord-btn">Join Discord</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NX Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="closeCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

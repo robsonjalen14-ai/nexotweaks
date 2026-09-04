@@ -12,7 +12,13 @@
 </head>
 <body>
 
-    <nav class="nav">
+    <!-- scroll progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="nav" id="nav">
         <div class="nav-inner">
             <a href="/" class="nav-brand">
                 <img src="logo.png" alt="Nxo" class="nav-logo" width="26" height="26">
@@ -38,44 +44,50 @@
 
     <main>
 
-        <!-- ═══════════════ HERO ═══════════════ -->
-        <section class="hero">
-            <!-- background grid pattern -->
+        <!-- HERO -->
+        <section class="hero" id="hero">
             <div class="hero-grid-bg"></div>
-            <!-- floating particles -->
+            <div class="hero-orbs">
+                <div class="hero-orb orb-teal"></div>
+                <div class="hero-orb orb-purple"></div>
+            </div>
             <div class="hero-particles">
                 <span class="particle p1"></span>
                 <span class="particle p2"></span>
                 <span class="particle p3"></span>
                 <span class="particle p4"></span>
                 <span class="particle p5"></span>
+                <span class="particle p6"></span>
             </div>
 
             <div class="hero-inner">
                 <div class="hero-left">
-                    <div class="hero-chip">
+                    <div class="hero-chip" data-fade>
                         <span class="chip-dot"></span>
                         Trusted by 100+ gamers
                     </div>
                     <h1>
-                        <span class="line1">Boost FPS.</span>
-                        <span class="line2">Zero Delay.</span>
-                        <span class="line3 accent">Dominate.</span>
+                        <span class="line1" data-fade>Boost FPS.</span>
+                        <span class="line2" data-fade>Zero Delay.</span>
+                        <span class="line3 accent" data-fade>Dominate.</span>
                     </h1>
-                    <p class="hero-sub">Premium Windows optimization for competitive gamers. 200+ one-click tweaks. Safe, reversible, instant delivery.</p>
-                    <div class="hero-actions">
-                        <a href="#products" class="btn-glow">View Products</a>
+                    <p class="hero-sub" data-fade>Premium Windows optimization for competitive gamers. 200+ one-click tweaks. Safe, reversible, instant delivery.</p>
+                    <div class="hero-actions" data-fade>
+                        <a href="#products" class="btn-glow">
+                            <span>View Products</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
                         <a href="https://discord.gg/nxotweaks" target="_blank" class="btn-ghost">Join Discord</a>
                     </div>
-                    <div class="hero-metrics">
-                        <div class="metric"><span class="metric-val">200+</span><span class="metric-lbl">Tweaks</span></div>
+                    <div class="hero-metrics" data-fade>
+                        <div class="metric"><span class="metric-val" data-count="200">0</span><span class="metric-lbl">Tweaks</span></div>
                         <div class="metric-sep"></div>
-                        <div class="metric"><span class="metric-val">100+</span><span class="metric-lbl">Users</span></div>
+                        <div class="metric"><span class="metric-val" data-count="100">0</span><span class="metric-lbl">Users</span></div>
                         <div class="metric-sep"></div>
-                        <div class="metric"><span class="metric-val">25+</span><span class="metric-lbl">Vouches</span></div>
+                        <div class="metric"><span class="metric-val" data-count="25">0</span><span class="metric-lbl">Vouches</span></div>
                     </div>
                 </div>
-                <div class="hero-right">
+                <div class="hero-right" data-fade>
                     <div class="hero-logo-orbit">
                         <div class="orbit-ring o1"></div>
                         <div class="orbit-ring o2"></div>
@@ -93,16 +105,38 @@
             </div>
         </section>
 
-        <!-- ═══════════════ PRODUCTS ═══════════════ -->
+        <!-- TICKER -->
+        <div class="ticker">
+            <div class="ticker-track">
+                <span class="ticker-item">&#9889; FPS Boost</span>
+                <span class="ticker-dot"></span>
+                <span class="ticker-item">&#128293; Low Latency</span>
+                <span class="ticker-dot"></span>
+                <span class="ticker-item">&#128187; Windows Optimized</span>
+                <span class="ticker-dot"></span>
+                <span class="ticker-item">&#9989; Safe &amp; Reversible</span>
+                <span class="ticker-dot"></span>
+                <span class="ticker-item">&#9889; Instant Delivery</span>
+                <span class="ticker-dot"></span>
+                <span class="ticker-item">&#128293; One-Click Tweaks</span>
+                <span class="ticker-dot"></span>
+                <span class="ticker-item">&#128187; 200+ Optimizations</span>
+                <span class="ticker-dot"></span>
+                <span class="ticker-item">&#9989; Lifetime Access</span>
+                <span class="ticker-dot"></span>
+            </div>
+        </div>
+
+        <!-- PRODUCTS -->
         <section id="products" class="products">
-            <div class="products-header">
+            <div class="products-header" data-fade>
                 <div class="section-label"><span></span>Products</div>
                 <h2>Pick Your Pack</h2>
                 <p>Instant delivery. Lifetime access. One-time payment.</p>
             </div>
             <div class="products-grid">
 
-                <article class="pcard">
+                <article class="pcard" data-fade>
                     <div class="pcard-head">
                         <span class="pcard-tier">Basic</span>
                         <img src="logo.png" alt="" class="pcard-icon" width="32" height="32">
@@ -119,7 +153,7 @@
                     <button class="pcard-buy" onclick="checkout('basic')">Purchase</button>
                 </article>
 
-                <article class="pcard pcard-featured">
+                <article class="pcard pcard-featured" data-fade>
                     <div class="pcard-ribbon">Most Popular</div>
                     <div class="pcard-head">
                         <span class="pcard-tier" style="color:var(--purple)">Pro</span>
@@ -138,7 +172,7 @@
                     <button class="pcard-buy pcard-buy-purple" onclick="checkout('pro')">Purchase</button>
                 </article>
 
-                <article class="pcard">
+                <article class="pcard" data-fade>
                     <div class="pcard-head">
                         <span class="pcard-tier" style="color:var(--fire)">Extreme</span>
                         <img src="logo.png" alt="" class="pcard-icon" width="32" height="32">
@@ -156,7 +190,7 @@
                     <button class="pcard-buy" onclick="checkout('extreme')">Purchase</button>
                 </article>
 
-                <article class="pcard pcard-gold">
+                <article class="pcard pcard-gold" data-fade>
                     <div class="pcard-ribbon gold">Best Value</div>
                     <div class="pcard-head">
                         <span class="pcard-tier" style="color:var(--gold)">Ultimate</span>
@@ -176,13 +210,50 @@
             </div>
         </section>
 
-        <!-- ═══════════════ COMPARE ═══════════════ -->
+        <!-- HOW IT WORKS -->
+        <section class="how" id="how">
+            <div class="how-inner">
+                <div class="how-header" data-fade>
+                    <div class="section-label"><span></span>How It Works</div>
+                    <h2>3 Steps. Done.</h2>
+                    <p>From purchase to domination in under 2 minutes.</p>
+                </div>
+                <div class="how-steps">
+                    <div class="how-step" data-fade>
+                        <div class="how-step-num">01</div>
+                        <div class="how-step-icon">&#128722;</div>
+                        <h3>Pick a Pack</h3>
+                        <p>Choose the tier that matches your needs. Every pack is a one-time payment.</p>
+                    </div>
+                    <div class="how-step-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="how-step" data-fade>
+                        <div class="how-step-num">02</div>
+                        <div class="how-step-icon">&#9889;</div>
+                        <h3>Instant Delivery</h3>
+                        <p>Get your download link and instructions via email right after checkout.</p>
+                    </div>
+                    <div class="how-step-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="how-step" data-fade>
+                        <div class="how-step-num">03</div>
+                        <div class="how-step-icon">&#127918;</div>
+                        <h3>Dominate</h3>
+                        <p>Run the tool, apply tweaks, feel the difference instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPARE -->
         <section id="compare" class="compare">
-            <div class="compare-header">
+            <div class="compare-header" data-fade>
                 <div class="section-label"><span></span>Compare</div>
                 <h2>What's Included</h2>
             </div>
-            <div class="compare-wrap">
+            <div class="compare-wrap" data-fade>
                 <table>
                     <thead>
                         <tr>
@@ -210,17 +281,17 @@
             </div>
         </section>
 
-        <!-- ═══════════════ RESULTS ═══════════════ -->
+        <!-- RESULTS -->
         <section id="results" class="results">
             <div class="results-bg-accent"></div>
             <div class="results-inner">
-                <div class="results-text">
+                <div class="results-text" data-fade>
                     <div class="section-label"><span></span>Results</div>
                     <h2>Real Gains</h2>
                     <p>Numbers from actual users. No cap.</p>
                 </div>
                 <div class="results-grid">
-                    <div class="rcard">
+                    <div class="rcard" data-fade>
                         <div class="rcard-head">
                             <span class="rcard-icon">&#127918;</span>
                             <span class="rcard-title">FPS Boost</span>
@@ -239,7 +310,7 @@
                         </div>
                         <span class="rcard-badge">+160%</span>
                     </div>
-                    <div class="rcard">
+                    <div class="rcard" data-fade>
                         <div class="rcard-head">
                             <span class="rcard-icon">&#9889;</span>
                             <span class="rcard-title">Input Delay</span>
@@ -258,7 +329,7 @@
                         </div>
                         <span class="rcard-badge">-98%</span>
                     </div>
-                    <div class="rcard">
+                    <div class="rcard" data-fade>
                         <div class="rcard-head">
                             <span class="rcard-icon">&#128187;</span>
                             <span class="rcard-title">Low End PC</span>
@@ -281,9 +352,9 @@
             </div>
         </section>
 
-        <!-- ═══════════════ VOUCHES ═══════════════ -->
+        <!-- VOUCHES -->
         <section id="vouches" class="vouches">
-            <div class="vouches-header">
+            <div class="vouches-header" data-fade>
                 <div class="section-label"><span></span>Vouches</div>
                 <h2>Real People. Real Results.</h2>
             </div>
@@ -359,36 +430,36 @@
             </div>
         </section>
 
-        <!-- ═══════════════ FAQ ═══════════════ -->
+        <!-- FAQ -->
         <section id="faq" class="faq">
             <div class="faq-layout">
-                <div class="faq-left">
+                <div class="faq-left" data-fade>
                     <div class="section-label"><span></span>FAQ</div>
                     <h2>Questions?</h2>
                     <p>Everything you need to know before purchasing.</p>
                 </div>
                 <div class="faq-right">
-                    <details class="faq-item">
+                    <details class="faq-item" data-fade>
                         <summary>Is it safe?</summary>
                         <div class="faq-body">Yes. Every tweak has a one-click revert. A full system restore point is created before any changes. Risky tweaks are flagged and never run unless you opt in.</div>
                     </details>
-                    <details class="faq-item">
+                    <details class="faq-item" data-fade>
                         <summary>Will I get banned?</summary>
                         <div class="faq-body">No. Nxo Tweaks only modifies Windows system settings. It does not touch game files or anti-cheat systems. 100% safe for all games.</div>
                     </details>
-                    <details class="faq-item">
+                    <details class="faq-item" data-fade>
                         <summary>How do I get the product?</summary>
                         <div class="faq-body">After purchase on Stripe, you'll receive your download link and instructions via email instantly. Setup takes less than 2 minutes.</div>
                     </details>
-                    <details class="faq-item">
+                    <details class="faq-item" data-fade>
                         <summary>Do you offer refunds?</summary>
                         <div class="faq-body">Yes. If the product doesn't work as advertised, contact us on Discord for a full refund.</div>
                     </details>
-                    <details class="faq-item">
+                    <details class="faq-item" data-fade>
                         <summary>Which pack should I get?</summary>
                         <div class="faq-body">Basic for beginners. Pro for competitive gamers. Extreme for pros. Ultimate for those who want everything.</div>
                     </details>
-                    <details class="faq-item">
+                    <details class="faq-item" data-fade>
                         <summary>What payment methods do you accept?</summary>
                         <div class="faq-body">All major credit/debit cards via Stripe. Apple Pay and Google Pay also supported.</div>
                     </details>
@@ -396,13 +467,16 @@
             </div>
         </section>
 
-        <!-- ═══════════════ CTA ═══════════════ -->
+        <!-- CTA -->
         <section class="cta">
             <div class="cta-glow"></div>
             <img src="logo.png" alt="" class="cta-logo" width="56" height="56">
-            <h2>Ready to Dominate?</h2>
-            <p>Join 100+ gamers who optimized their PCs with Nxo Tweaks.</p>
-            <a href="#products" class="btn-glow btn-lg">Get Started</a>
+            <h2 data-fade>Ready to Dominate?</h2>
+            <p data-fade>Join 100+ gamers who optimized their PCs with Nxo Tweaks.</p>
+            <a href="#products" class="btn-glow btn-lg" data-fade>
+                <span>Get Started</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
         </section>
 
     </main>

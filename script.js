@@ -29,7 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
 });
 
-// Fade in on scroll
+// Staggered fade in
 const fadeObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
         if (e.isIntersecting) {
@@ -37,15 +37,15 @@ const fadeObs = new IntersectionObserver(entries => {
             fadeObs.unobserve(e.target);
         }
     });
-}, {threshold: 0.06});
+}, {threshold: 0.05, rootMargin: '0px 0px -40px 0px'});
 
 document.querySelectorAll('.pcard,.rcard,.vouch,.faq-item').forEach((el, i) => {
     el.classList.add('fade-in');
-    el.style.transitionDelay = (i * 0.05) + 's';
+    el.style.transitionDelay = (i % 4) * 0.08 + 's';
     fadeObs.observe(el);
 });
 
-// Animate result bars on scroll
+// Animate result bars
 const barObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
         if (e.isIntersecting) {
@@ -62,5 +62,19 @@ const barObs = new IntersectionObserver(entries => {
         }
     });
 }, {threshold: 0.3});
-
 document.querySelectorAll('.rcard').forEach(el => barObs.observe(el));
+
+// Nav background on scroll
+const nav = document.querySelector('.nav');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > 50) {
+        nav.style.borderBottomColor = 'rgba(90,173,173,.12)';
+        nav.style.background = 'rgba(8,12,18,.92)';
+    } else {
+        nav.style.borderBottomColor = '';
+        nav.style.background = '';
+    }
+    lastScroll = y;
+}, {passive: true});

@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NX Store - Premium Digital Products</title>
+    <title>Nxo Tweaks - Windows Optimization & FPS Booster</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">NX<span>Store</span></a>
+            <a href="#" class="logo">Nxo<span>Tweaks</span></a>
             <ul class="nav-links">
                 <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Support</a></li>
             </ul>
             <button class="cart-btn" id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
         </div>
@@ -21,142 +22,128 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Premium Digital Products</h1>
-            <p>Fast delivery. Secure payment. Top quality.</p>
-            <a href="#products" class="cta-btn">Browse Products</a>
+            <h1>Boost Your FPS. Lower Your Ping.</h1>
+            <p>200+ one-click Windows tweaks. Safe revert on everything. Trusted by thousands of gamers.</p>
+            <a href="#products" class="cta-btn">Shop Now</a>
         </div>
     </header>
 
     <section id="products" class="products">
-        <h2>Our Products</h2>
-        <div class="product-grid" id="productGrid">
-            <div class="product-card" data-id="1" data-name="Nxo Tweaks Pro" data-price="14.99">
-                <div class="product-badge">BEST SELLER</div>
+        <h2>Choose Your Plan</h2>
+        <div class="product-grid">
+            <div class="product-card" data-id="1" data-name="Nxo Tweaks Monthly" data-price="9.99">
                 <div class="product-icon">&#9889;</div>
-                <h3>Nxo Tweaks Pro</h3>
-                <p>Full performance optimization pack for maximum FPS and lowest input lag.</p>
-                <div class="product-features">
-                    <span>&#10003; Instant Delivery</span>
-                    <span>&#10003; Lifetime Access</span>
-                </div>
-                <div class="product-footer">
-                    <span class="price">$14.99</span>
-                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-                </div>
+                <h3>Monthly</h3>
+                <div class="product-price">$9.99<small>/mo</small></div>
+                <p>Billed monthly. Cancel anytime.</p>
+                <ul class="product-features">
+                    <li>&#10003; All 200+ tweaks</li>
+                    <li>&#10003; AI assistant</li>
+                    <li>&#10003; Safe revert + restore points</li>
+                    <li>&#10003; Discord support</li>
+                </ul>
+                <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
             </div>
 
-            <div class="product-card" data-id="2" data-name="Nxo RGB Pack" data-price="9.99">
-                <div class="product-badge new">NEW</div>
-                <div class="product-icon">&#127912;</div>
-                <h3>Nxo RGB Pack</h3>
-                <p>Custom RGB lighting profiles and animations for your setup.</p>
-                <div class="product-features">
-                    <span>&#10003; Instant Delivery</span>
-                    <span>&#10003; 50+ Profiles</span>
-                </div>
-                <div class="product-footer">
-                    <span class="price">$9.99</span>
-                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-                </div>
+            <div class="product-card popular" data-id="2" data-name="Nxo Tweaks 6 Months" data-price="39.99">
+                <div class="product-badge">BEST VALUE</div>
+                <div class="product-icon">&#128640;</div>
+                <h3>6 Months</h3>
+                <div class="product-price">$39.99<small>/6mo</small></div>
+                <p>Save 35% + get 1 free license for a friend.</p>
+                <ul class="product-features">
+                    <li>&#10003; Everything in Monthly</li>
+                    <li>&#10003; Per-game profiles</li>
+                    <li>&#10003; Priority support</li>
+                    <li>&#10003; +1 free license</li>
+                </ul>
+                <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
             </div>
 
-            <div class="product-card" data-id="3" data-name="Nxo Macro Suite" data-price="19.99">
-                <div class="product-icon">&#9881;</div>
-                <h3>Nxo Macro Suite</h3>
-                <p>Advanced macro automation tool with custom scripting support.</p>
-                <div class="product-features">
-                    <span>&#10003; Instant Delivery</span>
-                    <span>&#10003; Auto Updates</span>
-                </div>
-                <div class="product-footer">
-                    <span class="price">$19.99</span>
-                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-id="4" data-name="Nxo VPN Shield" data-price="24.99">
-                <div class="product-icon">&#128737;</div>
-                <h3>Nxo VPN Shield</h3>
-                <p>Secure VPN service with dedicated servers and zero logs policy.</p>
-                <div class="product-features">
-                    <span>&#10003; 6 Months Access</span>
-                    <span>&#10003; All Devices</span>
-                </div>
-                <div class="product-footer">
-                    <span class="price">$24.99</span>
-                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-id="5" data-name="Nxo Sound Pack" data-price="7.99">
-                <div class="product-icon">&#127925;</div>
-                <h3>Nxo Sound Pack</h3>
-                <p>Premium sound effects and notification tones for your system.</p>
-                <div class="product-features">
-                    <span>&#10003; Instant Delivery</span>
-                    <span>&#10003; 200+ Sounds</span>
-                </div>
-                <div class="product-footer">
-                    <span class="price">$7.99</span>
-                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card" data-id="6" data-name="Nxo Wallpaper HD" data-price="4.99">
-                <div class="product-icon">&#127748;</div>
-                <h3>Nxo Wallpaper HD</h3>
-                <p>Exclusive 4K wallpapers and live backgrounds collection.</p>
-                <div class="product-features">
-                    <span>&#10003; Instant Delivery</span>
-                    <span>&#10003; 100+ Wallpapers</span>
-                </div>
-                <div class="product-footer">
-                    <span class="price">$4.99</span>
-                    <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-                </div>
+            <div class="product-card" data-id="3" data-name="Nxo Tweaks Lifetime" data-price="99.99">
+                <div class="product-icon">&#11088;</div>
+                <h3>Lifetime</h3>
+                <div class="product-price">$99.99<small> once</small></div>
+                <p>Pay once, own it forever. No subscriptions.</p>
+                <ul class="product-features">
+                    <li>&#10003; Everything in 6 Months</li>
+                    <li>&#10003; Lifetime free updates</li>
+                    <li>&#10003; Early access to new tweaks</li>
+                    <li>&#10003; One-time payment</li>
+                </ul>
+                <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2>Why Choose NX Store?</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">&#9889;</div>
-                    <h3>Instant Delivery</h3>
-                    <p>Get your products immediately after payment via email.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">&#128274;</div>
-                    <h3>Secure Payment</h3>
-                    <p>Pay safely with Stripe - your data is always protected.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">&#128172;</div>
-                    <h3>24/7 Support</h3>
-                    <p>Our team is here to help you anytime via Discord.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">&#10024;</div>
-                    <h3>Premium Quality</h3>
-                    <p>All products tested and updated regularly.</p>
-                </div>
+    <section id="features" class="features">
+        <h2>What Nxo Tweaks Does</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">&#127918;</div>
+                <h3>Gaming Optimizations</h3>
+                <p>Disable Game DVR & FSO, boost GPU priority, reduce input latency for mouse and keyboard.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128640;</div>
+                <h3>FPS Boost</h3>
+                <p>Smart RAM optimization, CPU core unparking, ultimate power plan for max performance.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#127760;</div>
+                <h3>Network Optimization</h3>
+                <p>Fix network spikes and ping, TCP optimizer, reduce latency for online gaming.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128737;</div>
+                <h3>100% Safe</h3>
+                <p>Every tweak has one-click revert. Full system restore point created before any changes.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#127912;</div>
+                <h3>Per-Game Profiles</h3>
+                <p>Optimized settings for Fortnite, Valorant, CS2, Apex Legends, and more.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128172;</div>
+                <h3>24/7 Discord Support</h3>
+                <p>Get help anytime from our community and support team on Discord.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>Is it safe?</h3>
+                <p>Yes. Every tweak has a one-click revert, and Nxo Tweaks creates a full system restore point before applying anything. Risky tweaks are clearly flagged and never run unless you opt in.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Will it actually boost my FPS?</h3>
+                <p>Yes. Nxo Tweaks has per-game profiles that set CPU/GPU priority, disable fullscreen optimizations, and apply QoS so your game gets resources first. Most players see higher and more stable FPS.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can it lower my ping?</h3>
+                <p>Yes. The Network category tunes the TCP/IP stack - disabling Nagle's algorithm, removing the Windows network throttle, and enabling MSI mode on your network adapter.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I get the product?</h3>
+                <p>After purchase, you'll receive your license key and download link via email instantly. Setup takes less than 2 minutes.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Join our Discord for support and updates</p>
+        <h2>Need Help?</h2>
+        <p>Join our Discord community for instant support</p>
         <a href="#" class="discord-btn">Join Discord</a>
     </section>
 
     <footer>
-        <p>&copy; 2026 NX Store. All rights reserved.</p>
+        <p>&copy; 2026 Nxo Tweaks. All rights reserved. Not affiliated with Microsoft.</p>
     </footer>
 
-    <!-- Cart Modal -->
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
             <div class="cart-header">
@@ -170,7 +157,7 @@
                 <span>Total:</span>
                 <span id="cartTotal">$0.00</span>
             </div>
-            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+            <button class="checkout-btn" id="checkoutBtn">Checkout with Stripe</button>
         </div>
     </div>
 

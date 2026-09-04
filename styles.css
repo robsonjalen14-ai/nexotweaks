@@ -140,7 +140,6 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--text);
 }
 
 .product-grid {
@@ -153,7 +152,7 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 2rem;
+    padding: 2.5rem;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -163,20 +162,22 @@ body {
     box-shadow: 0 20px 40px rgba(0, 102, 255, 0.15);
 }
 
-.product-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--primary);
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
+.product-card.popular {
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.2);
 }
 
-.product-badge.new {
-    background: var(--success);
+.product-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .product-icon {
@@ -185,50 +186,52 @@ body {
 }
 
 .product-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--text);
 }
 
-.product-card p {
+.product-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 1rem 0;
+}
+
+.product-price small {
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+}
+
+.product-card > p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
 }
 
 .product-features {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 2rem;
 }
 
-.product-features span {
-    font-size: 0.85rem;
-    color: var(--success);
+.product-features li {
+    padding: 0.5rem 0;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
 }
 
-.product-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
-}
-
-.price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
+.product-features li:last-child {
+    border-bottom: none;
 }
 
 .add-to-cart {
+    width: 100%;
     background: var(--primary);
     color: white;
     border: none;
-    padding: 0.7rem 1.5rem;
+    padding: 1rem;
     border-radius: 8px;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -237,26 +240,23 @@ body {
     background: var(--primary-dark);
 }
 
-/* About */
-.about {
+/* Features */
+.features {
     background: var(--darker);
     padding: 5rem 2rem;
 }
 
-.about-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-content h2 {
+.features h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
 
 .features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -275,7 +275,6 @@ body {
 
 .feature h3 {
     margin-bottom: 0.5rem;
-    color: var(--text);
 }
 
 .feature p {
@@ -283,10 +282,41 @@ body {
     font-size: 0.95rem;
 }
 
+/* FAQ */
+.faq {
+    padding: 5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.faq-item p {
+    color: var(--text-muted);
+}
+
 /* Contact */
 .contact {
     text-align: center;
     padding: 5rem 2rem;
+    background: var(--darker);
 }
 
 .contact h2 {
@@ -364,10 +394,6 @@ footer {
     border-bottom: 1px solid var(--border);
 }
 
-.cart-header h3 {
-    font-size: 1.3rem;
-}
-
 .close-cart {
     background: none;
     border: none;
@@ -396,7 +422,6 @@ footer {
 }
 
 .cart-item-info h4 {
-    font-size: 1rem;
     margin-bottom: 0.3rem;
 }
 
